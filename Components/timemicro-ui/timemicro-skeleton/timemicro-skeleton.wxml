@@ -1,0 +1,5 @@
+<!--Components/timemicro-skeleton/timemicro-skeleton.wxml-->
+<view class="content" style="width:{{systemInfo.windowWidth}}px;height:{{systemInfo.windowHeight}}px;">
+	<view class="item" wx:for="{{skeletonRectLists}}" wx:key="{{index}}" style="width:{{item.width}}px;height:{{item.height}}px;left: {{item.left}}px;top:{{item.top}}px"></view>
+	<view class="item" wx:for="{{skeletonCircleLists}}" wx:key="{{index}}" style="width:{{item.width}}px;height:{{item.height}}px;left: {{item.left}}px;top:{{item.top}}px"></view>
+</view>

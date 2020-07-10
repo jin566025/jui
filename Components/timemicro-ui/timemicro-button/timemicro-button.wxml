@@ -1,0 +1,5 @@
+<!--Components/timemicro-button/timemicro-button.wxml-->
+<view class="btn-box" bindtap="onButtonClick" style="width:{{width}}rpx;height:{{height}}rpx;font-size:{{fontSize}}rpx;line-height:{{height}}rpx;text-align:center;color:{{fontColor}};background-color:{{bgColor}};border-radius:{{radius}}rpx;border:{{borderWeight}}px solid {{borderColor ? borderColor:bgColor}}">
+	<slot></slot>
+	<view class="btn-shadow"></view>
+</view>

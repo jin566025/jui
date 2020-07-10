@@ -1,0 +1,4 @@
+<!--Components/timemicro-row/timemicro-row.wxml-->
+<view class="flex-box">
+  <slot></slot>
+</view>

@@ -1,0 +1,5 @@
+/**app.wxss**/
+@import '/styles/base.wxss';
+.container {
+
+} 

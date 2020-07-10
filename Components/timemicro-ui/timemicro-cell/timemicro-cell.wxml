@@ -1,0 +1,16 @@
+<!--Components/Cell/timemicro-cell/timemicro-cell.wxml-->
+<view class="flex-box align-center justify-btw width-750 border-box" 
+  style="padding-left:{{padding}}rpx;padding-right:{{padding}}rpx;height:{{height}}"
+  bindtap="onCellClick"
+  >
+  <view class="flex-box align-center">
+    <slot name="titleBefore"></slot>
+    <view style="font-size:{{titleFont}}rpx;color:{{valueFontColor}}">{{title}}</view>
+  </view>
+	
+  <view class="flex-box align-center">
+    <view style="font-size:{{valueFont}}rpx;color:{{valueFontColor}}">{{value}}</view>
+    <slot name="valueAfter"></slot>
+  </view>
+	
+</view>

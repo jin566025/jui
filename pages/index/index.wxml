@@ -1,0 +1,227 @@
+<!--index.wxml-->
+<!-- 骨架屏组件 -->
+<!-- <timemicro-skeleton selector="skeleton"></timemicro-skeleton> -->
+<view class="container skeleton">
+  <view>
+    <timemicro-toast id="timemicro-toast"></timemicro-toast>
+  </view>
+  <view>
+    <view class="section-title">栅格组件：(没有了，做不出来，样式不能跨组件...)</view>
+    <view class="flex-box" style="width:90%;margin:0 auto;">
+      <view class="col-3 col-bg1">col-3</view>
+      <view class="col-6 col-bg2">col-6</view>
+      <view class="col-3 col-bg3">col-3</view>
+    </view>
+    <view class="flex-box" style="width:90%;margin:0 auto;">
+      <view class="col-2 col-bg1">col-2</view>
+      <view class="col-4 col-bg2">col-4</view>
+      <view class="col-6 col-bg3">col-6</view>
+    </view>
+  </view>
+  <view>
+    <view class="section-title">搜索组件：</view>
+    <view>
+      <timemicro-search bind:onInput="onInput" bind:onBlur="onBlur" bind:onConfirm="onConfirm" iconPostion="left" iconSpace="20" iconColor="#323233" iconSize="36" inputSpace="4" fontSize="26" fontColor="#323233"></timemicro-search>
+      <view style="width:100%;height:20rpx"></view>
+      <timemicro-search iconPostion="right" iconSpace="20" iconColor="#323233" iconSize="36" inputSpace="20" fontSize="26" fontColor="#323233"></timemicro-search>
+    </view>
+  </view>
+
+  <view>
+    <view class="section-title">无数据组件：</view>
+    <view>
+      <timemicro-empty icon="icon_empty_2" iconSize="50" image="" imageWidth="" imageHeight="" description="没有数据2" descriptionSize="30" descriptionSpace="20" ></timemicro-empty>
+      <view style="width:100%;height:50rpx"></view>
+      <timemicro-empty icon="icon_empty_3" iconSize="50" image="" imageWidth="" imageHeight="" description="没有数据3" descriptionSize="30" descriptionSpace="20" ></timemicro-empty>
+      <view style="width:100%;height:50rpx"></view>
+      <timemicro-empty  image="/images/noData.png" imageWidth="100" imageHeight="" description="没有数据4" descriptionSize="30" descriptionSpace="20" ></timemicro-empty>
+    </view>
+  </view>
+
+  <view>
+    <view class="section-title skeleton-rect">Cell组件：</view>
+    <timemicro-cell padding="20" title="我的钱包" titleFont="34" titleFontColor="#616161" value="演示" valueFont="30" valueFontColor="#616161" height="80rpx" bind:onCellClick="onCellClick">
+      <text slot="titleBefore" class="iconfont icon_new_msg" style="font-size:40rpx;color:#000000;margin-right:30rpx;"></text>
+      <text slot="valueAfter" class="iconfont icon_on_the_right" style="font-size:40rpx;color:#616161;margin-left:30rpx;"></text>
+    </timemicro-cell>
+    <timemicro-cell padding="20" title="我的消息" titleFont="34" titleFontColor="#616161" value="演示" valueFont="30" valueFontColor="#616161" height="80rpx" bind:onCellClick="onCellClick">
+      <text slot="titleBefore" class="iconfont icon_msg" style="font-size:40rpx;color:#000000;margin-right:30rpx;"></text>
+      <text slot="valueAfter" class="iconfont icon_on_the_right" style="font-size:40rpx;color:#616161;margin-left:30rpx;"></text>
+    </timemicro-cell>
+  </view>
+  <view>
+    <view class="section-title skeleton-rect">button组件：</view>
+    <view class="flex-box btn-lists">
+      <view class="btn-list">
+        <timemicro-button bind:buttonClick="onButtonClick"  width="160" height="60" fontSize="26" fontColor="#ffffff" bgColor="#78D500" radius="10">按钮</timemicro-button>
+      </view>
+      <view class="btn-list">
+        <timemicro-button to="/pages/logs/logs" width="160" height="60" fontSize="26" fontColor="#78D500" borderColor="#78D500"  radius="10">按钮</timemicro-button>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view class="section-title">toast组件：</view>
+    <view>
+      <view class="btn-list flex-box">
+        <timemicro-button bind:buttonClick="onButtonClick"  width="160" height="60" fontSize="26" fontColor="#ffffff" bgColor="#78D500" radius="10">无图标</timemicro-button>
+        <timemicro-button style="margin:0 20rpx" bind:buttonClick="onButtonClick2"  width="160" height="60" fontSize="26" fontColor="#ffffff" bgColor="#78D500" radius="10">有图标</timemicro-button>
+        <timemicro-button bind:buttonClick="onButtonClick3"  width="160" height="60" fontSize="26" fontColor="#ffffff" bgColor="#78D500" radius="10">加载中</timemicro-button>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view class="section-title">loading组件：</view>
+    <view style="margin-left:30rpx" class="flex-box">
+     <timemicro-loading type="primary" fontSize="60" fontColor="#78D500" speed="1"></timemicro-loading>
+     <timemicro-loading style="margin:0 20rpx" type="info" fontSize="60" fontColor="#78D500" speed="2"></timemicro-loading>
+     <timemicro-loading type="spinner" fontSize="60" fontColor="#78D500" speed="1"></timemicro-loading>
+    </view>
+  </view>
+	<view>
+    <view class="section-title skeleton-rect">Icon字体图标：</view>
+    <view class="flex-box justify-btw icon-lists">
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_on_the_left icon-example"></text>
+        <text class="icon-name">icon_on_the_left</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_on_the_down icon-example"></text>
+        <text class="icon-name">icon_on_the_down</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_on_the_right icon-example"></text>
+        <text class="icon-name">icon_on_the_right</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_on_the_top icon-example"></text>
+        <text class="icon-name">icon_on_the_top</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_tips icon-example"></text>
+        <text class="icon-name">icon_tips</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_right icon-example"></text>
+        <text class="icon-name">icon_right</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_wrong icon-example"></text>
+        <text class="icon-name">icon_wrong</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_add icon-example"></text>
+        <text class="icon-name">icon_add</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_cut icon-example"></text>
+        <text class="icon-name">icon_cut</text>
+      </view>
+
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_empty_1 icon-example"></text>
+        <text class="icon-name">icon_empty_1</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_empty_2 icon-example"></text>
+        <text class="icon-name">icon_empty_2</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_empty_3 icon-example"></text>
+        <text class="icon-name">icon_empty_3</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_empty_4 icon-example"></text>
+        <text class="icon-name">icon_empty_4</text>
+      </view>
+
+
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_logout icon-example"></text>
+        <text class="icon-name">icon_logout</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_comment icon-example"></text>
+        <text class="icon-name">icon_comment</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_new_msg icon-example"></text>
+        <text class="icon-name">icon_new_msg</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_msg icon-example"></text>
+        <text class="icon-name">icon_msg</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_notice icon-example"></text>
+        <text class="icon-name">icon_notice</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_reply icon-example"></text>
+        <text class="icon-name">icon_reply</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_account icon-example"></text>
+        <text class="icon-name">icon_account</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_search icon-example"></text>
+        <text class="icon-name">icon_search</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_favorite icon-example"></text>
+        <text class="icon-name">icon_favorite</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_set_up icon-example"></text>
+        <text class="icon-name">icon_set_up</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_home icon-example"></text>
+        <text class="icon-name">icon_home</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_help icon-example"></text>
+        <text class="icon-name">icon_help</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_more icon-example"></text>
+        <text class="icon-name">icon_more</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_edit icon-example"></text>
+        <text class="icon-name">icon_edit</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_del icon-example"></text>
+        <text class="icon-name">icon_del</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_rotate icon-example"></text>
+        <text class="icon-name">icon_rotate</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_category icon-example"></text>
+        <text class="icon-name">icon_category</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_location icon-example"></text>
+        <text class="icon-name">icon_location</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_follow icon-example"></text>
+        <text class="icon-name">icon_follow</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_already_concerned icon-example"></text>
+        <text class="icon-name">icon_already_concerned</text>
+      </view>
+      <view class="flex-box align-center icon-list">
+        <text class="iconfont icon_already_concerned icon-example"></text>
+        <text class="icon-name">icon_unfollow</text>
+      </view>
+      
+    </view>
+    
+  </view>
+</view>

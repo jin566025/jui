@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "usingComponents": {
+    "timemicro-cell": "/Components/timemicro-ui/timemicro-cell/timemicro-cell",
+    "timemicro-col": "/Components/timemicro-ui/timemicro-col/timemicro-col",
+    "timemicro-row": "/Components/timemicro-ui/timemicro-row/timemicro-row",
+    "timemicro-button": "/Components/timemicro-ui/timemicro-button/timemicro-button",
+    "timemicro-toast": "/Components/timemicro-ui/timemicro-toast/timemicro-toast",
+    "timemicro-loading": "/Components/timemicro-ui/timemicro-loading/timemicro-loading",
+    "timemicro-search": "/Components/timemicro-ui/timemicro-search/timemicro-search",
+    "timemicro-empty": "/Components/timemicro-ui/timemicro-empty/timemicro-empty",
+    "timemicro-skeleton": "/Components/timemicro-ui/timemicro-skeleton/timemicro-skeleton"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

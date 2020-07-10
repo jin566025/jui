@@ -1,0 +1,14 @@
+<!--Components/timemicro-toast/timemicro-toast.wxml-->
+<view class="toast-box" animation="{{animationData}}">
+	<view class="toast-shadow" hidden="{{params.mask || true}}"></view>
+	<view class="toast-content absolute-center flex-box align-center justify-center" style="width:{{params.width || 300}}rpx;height:{{params.height || 160}}rpx;border-radius:{{params.radius || 10}}rpx">
+		<view>
+			<view class="icon" wx:if="{{params.icon=='loading'}}">
+				<timemicro-loading type="primary" fontSize="60" fontColor="#78D500" speed="1"></timemicro-loading>
+			</view>
+			<text wx:elif="{{params.icon && params.icon!='loading'}}" style="color:{{params.iconColor || '#fff'}};font-size:{{params.iconSize}}rpx" class="icon iconfont {{params.icon}}"></text>
+			<text wx:else></text>
+			<view class="toast-text" style="font-size:{{params.fontSize}}rpx;text-align:{{params.textAlign || 'center'}};margin-top:{{params.iconSpace}}rpx">{{params.content}}</view>
+		</view>
+	</view>
+</view>

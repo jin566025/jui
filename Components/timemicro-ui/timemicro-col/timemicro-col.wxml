@@ -1,0 +1,4 @@
+<!--Components/timemicro-col/timemicro-col.wxml-->
+<view class="col-{{span}}">
+  <slot></slot>
+</view>

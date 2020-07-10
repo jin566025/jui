@@ -1,0 +1,11 @@
+/* Components/timemicro-ui/timemicro-empty/timemicro-empty.wxss */
+@import '/icons/iconfont.wxss';
+
+.empty-icon{
+  display: block;
+  text-align: center;
+}
+
+.empty-description,.text-center{
+  text-align: center;
+}

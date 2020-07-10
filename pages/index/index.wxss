@@ -1,0 +1,49 @@
+/**index.wxss**/
+@import '/icons/iconfont.wxss';
+
+.icon-example {
+  font-size: 50rpx;
+  color: #b2b2b2;
+  margin: 20rpx;
+}
+
+.icon-name {
+  font-size: 24rpx;
+  color: #b2b2b2;
+}
+
+.icon-lists {
+  flex-wrap: wrap;
+}
+
+.icon-list {
+  width: 50%;
+  overflow: hidden;
+}
+
+.btn-lists {
+  flex-wrap: wrap;
+}
+
+.btn-list {
+  margin: 10rpx;
+}
+
+.section-title {
+  font-size: 30rpx;
+  color: #b2b2b2;
+  margin: 20rpx
+}
+.col-bg1{
+  background-color: slategrey;color: #fff;
+}
+.col-bg2{
+  background-color: #b2b2b2;color: #fff;
+}
+.col-bg3{
+  background-color: lightslategrey ;color: #fff;
+}
+
+.mb-30{
+  margin-bottom: 30rpx;
+}

@@ -1,0 +1,14 @@
+<!--Components/timemicro-ui/timemicro-search/timemicro-search.wxml-->
+<view>
+  <view class="flex-box align-center search-content border-box" style="height:80rpx;border-radius:10rpx">
+    <view class="search-icon" wx:if="{{iconPostion=='left'}}" style="margin:0 {{iconSpace}}rpx">
+      <text class="iconfont icon_search" style="color:{{iconColor}};font-size:{{iconSize}}rpx;"></text>
+    </view>
+    <view class="search-right flex-1">
+      <input bindinput="onInput" bindblur="onBlur" bindconfirm="onConfirm" class="border-box search-input" style="font-size:{{fontSize}}rpx;color:{{fontColor}};padding-left:{{inputSpace}}rpx" placeholder="请输入" />
+    </view>
+    <view class="search-icon" wx:if="{{iconPostion=='right'}}" style="margin:0 {{iconSpace}}rpx">
+      <text class="iconfont icon_search" style="color:{{iconColor}};font-size:{{iconSize}}rpx;"></text>
+    </view>
+  </view>
+</view>

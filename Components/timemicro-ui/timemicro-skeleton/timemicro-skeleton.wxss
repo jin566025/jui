@@ -1,0 +1,14 @@
+/* Components/timemicro-skeleton/timemicro-skeleton.wxss */
+.content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9998;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.item{
+  background-color: slategrey;
+  position: absolute;
+}

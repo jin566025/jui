@@ -1,0 +1,9 @@
+<!--Components/timemicro-ui/timemicro-empty/timemicro-empty.wxml-->
+<view class="flex-box align-center justify-btw">
+  <view class="text-center">
+    <text wx:if="{{icon}}" class="empty-icon iconfont {{icon ? icon:''}}" style="font-size:{{iconSize}}rpx"></text>
+    <image wx:if="{{image}}" src="{{image}}" class="empty-image" mode="widthFix" style="width:{{imageWidth}}rpx"></image>
+    <view class="empty-description" style="font-size:{{descriptionSize}}rpx;margin-top:{{descriptionSpace}}rpx;color:{{descriptionColor}}">{{description}}</view>
+  </view>
+  
+</view>
